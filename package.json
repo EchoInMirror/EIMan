@@ -1,0 +1,30 @@
+{
+  "name": "eiman",
+  "version": "1.0.0",
+  "description": "A page from eim.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url . --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EchoInMirror/EIMan.git"
+  },
+  "keywords": [
+    "eim"
+  ],
+  "author": "clanever",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EchoInMirror/EIMan/issues"
+  },
+  "homepage": "https://github.com/EchoInMirror/EIMan#readme",
+  "devDependencies": {
+    "less": "^4.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "parcel": "1.12.3"
+  }
+}

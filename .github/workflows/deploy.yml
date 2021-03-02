@@ -1,0 +1,30 @@
+name: Deploy
+
+on: push
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js and yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build
+
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          build_dir: dist
+          committer_email: eimsound@163.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
